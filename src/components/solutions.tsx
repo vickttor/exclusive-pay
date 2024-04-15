@@ -1,9 +1,6 @@
-"use client";
-
 import Image from "next/image";
 import iphoneMockupPng from "@/assets/iphone-mockup.png";
 
-import { useMediaQuery } from "@/lib/mediaQuery";
 import { Card } from "@/components/card";
 import {
   CircleDollarSign,
@@ -14,8 +11,6 @@ import {
 } from "lucide-react";
 
 export function SolutionsSection() {
-  const matches1400px = useMediaQuery("(min-width: 1400px)");
-
   return (
     <section className="w-full p-8 md:p-12 lg:p-20 relative space-y-20">
       <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-foreground font-bold w-full text-center">
@@ -23,7 +18,7 @@ export function SolutionsSection() {
       </h2>
 
       <div className="w-full flex flex-col items-center justify-center gap-8">
-        <div className="flex flex-wrap md:flex-nowrap items-center justify-center gap-8 lg:gap-[200px]">
+        <div className="flex flex-wrap md:flex-nowrap items-center justify-center gap-8 lg:gap-[120px] 2xl:gap-[200px]">
           <Card
             className="min-w-[320px] w-[320px] h-[280px]"
             icon={
@@ -43,7 +38,7 @@ export function SolutionsSection() {
           />
         </div>
 
-        <div className="flex flex-wrap md:flex-nowrap items-center justify-center gap-8 lg:gap-[200px] 2xl:gap-8">
+        <div className="flex flex-wrap md:flex-nowrap items-center justify-center gap-8 lg:gap-[120px]  2xl:gap-8">
           <Card
             className="min-w-[320px] w-[320px] h-[280px]"
             icon={
@@ -52,13 +47,12 @@ export function SolutionsSection() {
             title="Saas"
             content="Impulsione a assinatura de seus serviços SaaS com Exclusive Pay. Aproveite uma plataforma de pagamentos que se adapta à dinâmica do software como serviço, oferecendo flexibilidade e controle financeiro sem custos adicionais por parcelamento."
           />
-          {matches1400px && (
-            <Image
-              src={iphoneMockupPng}
-              alt="Iphone 15 Pro Max - Mockup Exclusive Pay"
-              className="w-full"
-            />
-          )}
+
+          <Image
+            src={iphoneMockupPng}
+            alt="Iphone 15 Pro Max - Mockup Exclusive Pay"
+            className="w-full hidden 2xl:block"
+          />
 
           <Card
             className="min-w-[320px] w-[320px] h-[280px]"
@@ -70,7 +64,7 @@ export function SolutionsSection() {
           />
         </div>
 
-        <div className="flex flex-wrap md:flex-nowrap items-center justify-center gap-8 lg:gap-[200px]">
+        <div className="flex flex-wrap md:flex-nowrap items-center justify-center gap-8 lg:gap-[120px] 2xl:gap-[200px]">
           <Card
             className="min-w-[320px] w-[320px] h-[280px]"
             icon={
@@ -90,6 +84,12 @@ export function SolutionsSection() {
           />
         </div>
       </div>
+
+      <Image
+        src={iphoneMockupPng}
+        alt="Iphone 15 Pro Max - Mockup Exclusive Pay"
+        className="mx-auto 2xl:hidden"
+      />
     </section>
   );
 }
