@@ -9,7 +9,7 @@ import { InfiniteMovingCards } from "@/components/acertenity/infinite-moving-car
 
 export function CompaniesSlider() {
   return (
-    <div className="w-full border">
+    <div className="w-full border border-[#808080]/20">
       <InfiniteMovingCards
         direction="right"
         speed="fast"

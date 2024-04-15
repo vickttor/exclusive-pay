@@ -1,19 +1,13 @@
 import Navbar from "@/components/navbar";
 import { Button } from "@/components/ui/button";
 
-import notebookPreviewSvg from "@/assets/notebook-preview.svg";
+import notebookPreviewPng from "@/assets/notebook-preview.png";
 import CircleArrowDownStyledSvg from "@/assets/circle-arrow-down.svg";
 import backgroundPng from "@/assets/background.png";
 
 import Image from "next/image";
 
-import {
-  Building,
-  CircleArrowDown,
-  CloudCog,
-  GraduationCap,
-  ShoppingCart,
-} from "lucide-react";
+import { Building, CloudCog, GraduationCap, ShoppingCart } from "lucide-react";
 import { CompaniesSlider } from "@/components/company-slider";
 
 export default function Home() {
@@ -40,7 +34,7 @@ export default function Home() {
         </Button>
 
         <Image
-          src={notebookPreviewSvg}
+          src={notebookPreviewPng}
           alt="Exclusive Pay Dashboard Preview in Notebook template"
         />
 
@@ -93,7 +87,7 @@ export default function Home() {
         <Image
           src={backgroundPng}
           alt="Background of the initial section"
-          className="absolute z-[-1] inset-0 mx-auto top-40"
+          className="absolute z-[-1] inset-0 mx-auto top-40 opacity-30"
         />
       </main>
 

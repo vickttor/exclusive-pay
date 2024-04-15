@@ -94,9 +94,9 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky z-10 top-0 right-0 left-0 mx-auto w-full max-w-[1060px] gap-6 flex items-center justify-between px-12 py-4 bg-[#f0f2f5]/45 backdrop-blur-md rounded-bl-3xl rounded-br-3xl shadow-md">
+    <nav className="sticky z-10 top-0 right-0 left-0 mx-auto w-full max-w-[1060px] gap-6 flex items-center justify-between px-12 py-4 bg-background/25 backdrop-blur-md rounded-bl-3xl rounded-br-3xl shadow-md">
       <Image
-        src="/logo.svg"
+        src="/logo.png"
         alt="Exclusive Pay Purple and Black Logo"
         priority
         width={120}

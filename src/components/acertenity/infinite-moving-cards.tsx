@@ -89,7 +89,7 @@ export const InfiniteMovingCards = ({
             key={idx}
             src={item}
             alt={"Company " + idx}
-            className="max-h-[30px] md:max-h-[40px] "
+            className="max-h-[25px] md:max-h-[30px]"
           />
         ))}
       </ul>
