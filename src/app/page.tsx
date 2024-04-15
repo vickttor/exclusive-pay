@@ -9,6 +9,7 @@ import Image from "next/image";
 
 import { Building, CloudCog, GraduationCap, ShoppingCart } from "lucide-react";
 import { CompaniesSlider } from "@/components/company-slider";
+import { World } from "@/components/world";
 
 export default function Home() {
   return (
@@ -92,6 +93,20 @@ export default function Home() {
       </main>
 
       <CompaniesSlider />
+
+      <section className="w-full p-8 md:p-12 lg:p-20 relative flex flex-col lg:flex-row justify-center items-center gap-14 lg:gap-28">
+        <div className="space-y-11">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-foreground font-bold max-w-[630px]">
+            Transformando o Mundo dos Pagamentos Globalmente
+          </h2>
+          <p className="text-lg sm:text-xl lg:text-2xl text-foreground max-w-[630px]">
+            Desbravando fronteiras, a Exclusive Pay transforma o mundo dos
+            pagamentos, conectando e impactando comunidades globalmente.
+          </p>
+        </div>
+
+        <World />
+      </section>
     </>
   );
 }
