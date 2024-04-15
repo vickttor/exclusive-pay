@@ -1,15 +1,16 @@
 import Navbar from "@/components/navbar";
 import { Button } from "@/components/ui/button";
 
-import notebookPreviewPng from "@/assets/notebook-preview.png";
-import CircleArrowDownStyledSvg from "@/assets/circle-arrow-down.svg";
 import backgroundPng from "@/assets/background.png";
+import CircleArrowDownStyledSvg from "@/assets/circle-arrow-down.svg";
+import notebookPreviewPng from "@/assets/notebook-preview.png";
 
 import Image from "next/image";
 
-import { Building, CloudCog, GraduationCap, ShoppingCart } from "lucide-react";
 import { CompaniesSlider } from "@/components/company-slider";
+import { SolutionsSection } from "@/components/solutions";
 import { World } from "@/components/world";
+import { Building, CloudCog, GraduationCap, ShoppingCart } from "lucide-react";
 
 export default function Home() {
   return (
@@ -107,6 +108,8 @@ export default function Home() {
 
         <World />
       </section>
+
+      <SolutionsSection />
     </>
   );
 }
