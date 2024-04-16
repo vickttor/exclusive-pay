@@ -1,5 +1,5 @@
 import Navbar from "@/components/navbar";
-import { Button } from "@/components/ui/button";
+import Doubts from "@/components/doubts";
 
 import backgroundPng from "@/assets/background.png";
 import CircleArrowDownStyledSvg from "@/assets/circle-arrow-down.svg";
@@ -26,6 +26,7 @@ import { CompaniesSlider } from "@/components/company-slider";
 import { SolutionsSection } from "@/components/solutions";
 import { Card } from "@/components/card";
 import { World } from "@/components/world";
+import { Button } from "@/components/ui/button";
 import {
   Building,
   CircleArrowOutUpRight,
@@ -34,7 +35,6 @@ import {
   MessageCircle,
   ShoppingCart,
 } from "lucide-react";
-import Doubts from "@/components/doubts";
 
 export default function Home() {
   return (
@@ -238,7 +238,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full p-8 md:p-12 lg:p-20 relative flex flex-col justify-start items-center gap-12 md:gap-20">
+      <section
+        id="reason"
+        className="w-full p-8 md:p-12 lg:p-20 relative flex flex-col justify-start items-center gap-12 md:gap-20"
+      >
         <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-foreground font-bold text-center">
           Por que escolher a Exclusive Pay?
         </h2>
@@ -316,7 +319,10 @@ export default function Home() {
       </section>
 
       <div className="bg-gradient-to-b from-background via-background to-[#2C076E]">
-        <section className="w-full p-8 md:p-12 lg:p-20 relative flex flex-col justify-start items-center gap-12 md:gap-20">
+        <section
+          id="doubts"
+          className="w-full p-8 md:p-12 lg:p-20 relative flex flex-col justify-start items-center gap-12 md:gap-20"
+        >
           <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-foreground font-bold text-center">
             Principais Dúvidas
           </h2>

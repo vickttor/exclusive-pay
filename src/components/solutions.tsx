@@ -12,7 +12,10 @@ import {
 
 export function SolutionsSection() {
   return (
-    <section className="w-full p-8 md:p-12 lg:p-20 relative space-y-20">
+    <section
+      id="solutions"
+      className="w-full p-8 md:p-12 lg:p-20 relative space-y-20"
+    >
       <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-foreground font-bold w-full text-center">
         Conheça nossas principais soluções
       </h2>

@@ -24,41 +24,65 @@ export default function Navbar() {
         <ul className="flex flex-col lg:flex-row items-center justify-center gap-6">
           <li>
             <Button
-              asChild
-              variant="link"
-              className="text-[18px] lg:text-sm text-primary p-0 font-medium tracking-wider"
-            >
-              <a href="#initial">Início</a>
-            </Button>
-          </li>
-
-          <li>
-            <Button
-              asChild
               variant="link"
               className="text-[18px] lg:text-sm text-foreground p-0 font-medium tracking-wider"
+              onClick={() => {
+                setIsMenuOpen(false);
+                setTimeout(
+                  () => ScrollAfterMilliseconds("#initial"),
+                  matches1024px ? 0 : 400
+                );
+              }}
             >
-              <a href="#solutions">Soluções</a>
+              Início
             </Button>
           </li>
 
           <li>
             <Button
-              asChild
+              variant="link"
+              className="text-[18px] lg:text-sm text-foreground p-0 font-medium tracking-wider"
+              onClick={() => {
+                setIsMenuOpen(false);
+                setTimeout(
+                  () => ScrollAfterMilliseconds("#solutions"),
+                  matches1024px ? 0 : 400
+                );
+              }}
+            >
+              Soluções
+            </Button>
+          </li>
+
+          <li>
+            <Button
               variant="link"
               className="text-[18px] lg:text-sm text-foreground p-0 font-medium tracking-wide"
+              onClick={() => {
+                setIsMenuOpen(false);
+                setTimeout(
+                  () => ScrollAfterMilliseconds("#reason"),
+                  matches1024px ? 0 : 400
+                );
+              }}
             >
-              <a href="#reason">Por que a Exclusive Pay</a>
+              Por que a Exclusive Pay
             </Button>
           </li>
 
           <li>
             <Button
-              asChild
               variant="link"
               className="text-[18px] lg:text-sm text-foreground p-0 font-medium tracking-wider"
+              onClick={() => {
+                setIsMenuOpen(false);
+                setTimeout(
+                  () => ScrollAfterMilliseconds("#doubts"),
+                  matches1024px ? 0 : 400
+                );
+              }}
             >
-              <a href="#doubts">Dúvidas</a>
+              Dúvidas
             </Button>
           </li>
         </ul>
@@ -125,4 +149,18 @@ export default function Navbar() {
       </Dialog>
     </nav>
   );
+}
+
+function ScrollAfterMilliseconds(elementId: string) {
+  const howDoesItWorkSection = document.querySelector(elementId);
+
+  if (howDoesItWorkSection) {
+    const distanceFromTop =
+      window.scrollY + howDoesItWorkSection?.getBoundingClientRect().top - 100;
+
+    window.scrollTo({
+      top: distanceFromTop,
+      behavior: "smooth",
+    });
+  }
 }
