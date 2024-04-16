@@ -51,7 +51,7 @@ export function SolutionsSection() {
           <Image
             src={iphoneMockupPng}
             alt="Iphone 15 Pro Max - Mockup Exclusive Pay"
-            className="w-full hidden 2xl:block"
+            className="hidden 2xl:block"
           />
 
           <Card
